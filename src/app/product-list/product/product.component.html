@@ -1,0 +1,18 @@
+<h3>
+    Todays item is : {{item}}
+</h3>
+<h2>My name is : {{name}}</h2>
+<!-- @output decorator -->
+ <label for="item-input">Add an item: </label>
+ <input type="text" id="text-input" #newItem>
+ <button type="button" (click)="addNewItem(newItem.value)">Add to Parent: </button> 
+
+ <div class="template_ref_var">
+    <h3>Are you Eleigible for voting</h3>
+    <input type="number" #ageField>
+    <button type="button" (click)="checkAge(ageField.value)">Check</button>
+    <p>{{message}}</p>
+    <h2 #para> HP</h2>
+    <button type="button" (click)="getDiv()">hjh</button>
+ </div>
+

@@ -1,0 +1,59 @@
+<div class="ekart-product-container">
+    <!-- <p>Name : {{name}}</p>
+    <p>Price : {{price}} </p>
+    <p>Color : {{color}}</p>
+    <P>Discounted Price :$779</P>
+    
+    <h2>Using Object</h2>
+    <h3>Name : {{product.name1}}</h3>
+    <h3>Price : {{"$" +product.price1}}</h3>
+    <h3>Color : {{product.color1}}</h3> -->
+    <!-- <h3>Discount is: {{product.price1 - (product.price1 * product.discount / 100)}}</h3> -->
+   
+   
+    <!-- Using function  -->
+    <!-- <h3>Discount Price: {{getDiscount().toFixed}}</h3> -->
+   
+   
+    <!-- Ternery operator -->
+    <!-- <h3>{{product.inStock > 0 ? "Only " +product.inStock+ " in stock": "Not in stock"}}</h3> -->
+    
+    <!-- property  binding -->
+    <!-- <button [disabled]="!(product.inStock>0)">Buy Now</button> -->
+    <!-- <input [value] = "fullName"><br> -->
+   
+    <!-- Event Binding -->
+    <!-- <input (input)="onNameChange($event)"><br>
+    <p>name: {{fullName}} </p><br><br>
+    
+    <button (click)="decrementKart()">-</button>
+    <span>{{addToCart}}</span>
+    <button (click)="incrementKart()">+</button> -->
+    <app-search></app-search>
+
+    <!-- @for(let i of listOfString;){
+        <p>current element of array is: {{items}}</p>
+    }  -->
+
+    <!-- <div class="products" *ngFor ='let items of listOfString;let i = index'> -->
+    <!-- <div *ngFor="let items of [2,3,4,5,6]"> -->
+        <!-- <p [class.txt-clr]="i==1">{{i+1}}.current element of array is: {{items}}</p> -->
+        <!-- <p [ngClass]="(i==1) ? 'txt-clr' : ''">{{i+1}}.current element of array is: {{items}}</p> -->
+    <!-- </div><br> <br><hr> -->
+
+    <!-- ngStyle -->
+     <h3>Using ngStyle</h3>
+     <div class="ekart-product-inStock" [ngStyle]="{fontWeight:'bold',color:product.is_in_inventory?'Green':'Red'}">
+        {{product.is_in_inventory?'Available in Stock' :'Not Available in Stock'}}
+     </div> <br><hr>
+
+     <!-- @Input decorator -->
+      <!-- <app-product [item]="currentItem"></app-product> -->
+       <!-- <app-product [name]="myname"></app-product> -->
+
+    <!-- @Output Decorator  -->
+     <app-product (newItemEvent)="addItem($event)" ></app-product>
+    <ul>
+        <!-- <li *ngFor="let item of items">{{item}}</li> -->
+    </ul>
+</div><hr>
